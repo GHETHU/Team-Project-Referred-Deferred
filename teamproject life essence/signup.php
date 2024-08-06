@@ -1,4 +1,4 @@
-'navbar.php'
+
 
 
 
@@ -217,13 +217,9 @@ label.form-check-label {
 
 
 <?php
+include 'navbar.php';
         
         require_once("connectdatabase.php");
-
-        
-        if ($db->connect_error) {
-            die("Connection failed: " . $db->connect_error);
-        }
 
         $message = '';
 
