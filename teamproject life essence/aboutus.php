@@ -1,3 +1,4 @@
+'navbar.php'
 <?php
 ?>
 <!DOCTYPE html>
