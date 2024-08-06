@@ -218,16 +218,11 @@ label.form-check-label {
 
 <?php
         
-        $servername = "localhost";  
-        $username = "root";         
-        $password = "";             
-        $dbname = "life_essence"; 
-        
-        $conn = new mysqli($servername, $username, $password, $dbname);
+        require_once("connectdatabase.php");
 
         
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
+        if ($db->connect_error) {
+            die("Connection failed: " . $db->connect_error);
         }
 
         $message = '';
@@ -248,7 +243,7 @@ label.form-check-label {
             } else {
                 
                 $sql = "SELECT * FROM users WHERE email = ?";
-                $stmt = $conn->prepare($sql);
+                $stmt = $db->prepare($sql);
                 $stmt->bind_param("s", $email);
                 $stmt->execute();
                 $result = $stmt->get_result();
@@ -261,7 +256,7 @@ label.form-check-label {
 
                     
                     $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
-                    $stmt = $conn->prepare($sql);
+                    $stmt = $db->prepare($sql);
                     $stmt->bind_param("sss", $username, $email, $hashed_password);
 
                     if ($stmt->execute()) {
@@ -273,7 +268,7 @@ label.form-check-label {
                 $stmt->close();
             }
         }
-        $conn->close();
+        $db->close();
         ?>
 
 	<div class="d-flex justify-content-center h-100">
