@@ -22,6 +22,8 @@ require_once("connectdatabase.php");
             <li><a href='listing.php'>Products Page</a></li>
             <li><a href='aboutus.php'>About</a></li>
             <li><a href='signup.php'>Signup</a></li>
+            <li><a href='login.php'>Login</a></li>
+            <li><a href='logout.php'>Logout</a></li>
             <li><a href='admin.php'>Admin</a></li>
         </ul>
         <a href="#" class="action_btn">Get Started</a>
@@ -34,6 +36,9 @@ require_once("connectdatabase.php");
         <li><a href="listing.php">Products Page</a></li>
         <li><a href="aboutus.php">About</a></li>
         <li><a href="admin.php">Admin</a></li>
+        <li><a href='signup.php'>Signup</a></li>
+        <li><a href='login.php'>Login</a></li>
+        <li><a href='logout.php'>Logout</a></li>
         <li><a href="signup.php" class="action_btn">Get Started</a></li>
     </div>
 </header>
