@@ -1,6 +1,3 @@
-'navbar.php'
-
-
 
 <!DOCTYPE html>
 <html>
@@ -203,12 +200,10 @@ margin-left: 4px;
 <body>
 <div class="container">
 <?php
-      
+include 'navbar.php';
         require_once("connectdatabase.php");
 
-        if ($db->connect_error) {
-            die("Connection failed: " . $db->connect_error);
-        }
+
 
         $message = '';
 
