@@ -204,17 +204,10 @@ margin-left: 4px;
 <div class="container">
 <?php
       
-        $servername = "localhost";  
-        $db_username = "root";      
-        $db_password = "";          
-        $dbname = "life_essence"; 
+        require_once("connectdatabase.php");
 
-        
-        $conn = new mysqli($servername, $db_username, $db_password, $dbname);
-
-        
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
+        if ($db->connect_error) {
+            die("Connection failed: " . $db->connect_error);
         }
 
         $message = '';
@@ -229,7 +222,7 @@ margin-left: 4px;
             } else {
                
                 $sql = "SELECT * FROM users WHERE username = ?";
-                $stmt = $conn->prepare($sql);
+                $stmt = $db->prepare($sql);
                 $stmt->bind_param("s", $username);
                 $stmt->execute();
                 $result = $stmt->get_result();
@@ -246,7 +239,7 @@ margin-left: 4px;
             }
         }
 
-        $conn->close();
+        $db->close();
         ?>
        
 	<div class="d-flex justify-content-center h-100">
