@@ -29,7 +29,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
             <li><a href='logout.php'>Logout</a></li>
             <li><a href='admin.php'>Admin</a></li>
         </ul>
-        <a href="#" class="action_btn">Get Started</a>
+        <a href="signup.php" class="action_btn">Get Started</a>
         <div class="toggle_btn">
             <i class="fa-solid fa-bars"></i>
         </div>
