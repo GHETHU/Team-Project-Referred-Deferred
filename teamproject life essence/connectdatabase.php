@@ -13,4 +13,11 @@ try {
     echo($ex->getMessage());
     exit;
 }
+
+if (isset($_SESSION['username'])) {
+    $user = $_SESSION['username'];
+    $uid = $_SESSION['uid'];
+    //echo "<h2> Welcome User, " . $_SESSION['username'] . " - ID: " . $_SESSION['uid'] . "! </h2>";
+}
+
 ?>
