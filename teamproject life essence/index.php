@@ -19,7 +19,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
 <body>
 <header>
     <div class="navbar">
-        <div class="logo"><a href="#">LIFE ESSENCE</a></div>
+        <div class="logo"><a href="index.php">LIFE ESSENCE</a></div>
         <ul class="links">
             <li><a href="index.php">Home</a></li>
             <li><a href='listing.php'>Products Page</a></li>
