@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 40%, #c3cfe2 100%);
+}
+
+.wrapper form {
+  padding: 30px;
+  width: 800px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper form .section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.wrapper form .section .column {
+  flex: 1 1 300px;
+}
+
+.wrapper form .section .column .heading {
+  font-size: 24px;
+  color: #333333;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #66CCCC;
+  margin-bottom: 20px;
+}
+
+.wrapper form .section .column .input-field {
+  margin: 20px 0;
+}
+
+.wrapper form .section .column .input-field label {
+  margin-bottom: 10px;
+  display: block;
+  font-weight: 500;
+  color: #666666;
+}
+
+.wrapper form .section .column .input-field input {
+  width: 100%;
+  border: 1px solid #dddddd;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.wrapper form .section .column .input-field input:focus {
+  border-color: #66CCCC;
+}
+
+.wrapper form .section .column .row-flex {
+  display: flex;
+  gap: 20px;
+}
+
+.wrapper form .section .column .row-flex .input-field {
+  flex: 1;
+}
+
+.wrapper form .section .column .input-field img {
+  height: 40px;
+  margin-top: 10px;
+  filter: drop-shadow(0 0 2px #000000);
+}
+
+.wrapper form .submit-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background: #333333;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.wrapper form .submit-button:hover {
+  background: #66CCCC;
+}
