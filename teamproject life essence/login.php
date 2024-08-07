@@ -30,7 +30,13 @@ include 'navbar.php';
                 $user = $stmt->fetch(PDO::FETCH_ASSOC);
         
                 if ($user && password_verify($password, $user['password'])) {
+			session_start();
+			$_SESSION["username"] = $_POST['username'];
+			$_SESSION["u_id"] = $user['u_id'];
                     $message = "Login successful!"; //Redirect to the Homepage from here
+			header("Location:index.php");
+                	exit();
+			
                 } else {
                     $message = "Invalid username or password.";
                 }
