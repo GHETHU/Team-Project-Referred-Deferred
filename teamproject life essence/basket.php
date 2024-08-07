@@ -1,4 +1,5 @@
 <?php
+include 'navbar.php';
 require_once('connectdatabase.php');
 $query = "SELECT * FROM `basket`;";
 $result = $db->query($query);
