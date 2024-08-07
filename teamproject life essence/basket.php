@@ -1,8 +1,6 @@
 <?php
 include 'navbar.php';
 require_once('connectdatabase.php');
-$query = "SELECT * FROM `basket`;";
-$result = $db->query($query);
 ?>
 
 <html>
@@ -11,7 +9,11 @@ $result = $db->query($query);
 </head>
 <body>
     <div id='maindiv' style='color:#62C0BF';>
-   <?php  
+   <?php
+$query = "SELECT * FROM `basket`;";
+try{
+$result = $db->query($query);
+
 if ($result->num_rows > 0)  
     { 
         // OUTPUT DATA OF EACH ROW 
@@ -26,7 +28,10 @@ if ($result->num_rows > 0)
     }  
     else { 
         echo "Basket is empty"; 
-    } 
+    }
+}
+    catch(exception $e){
+        echo@ 'Fatal Error';    }
 ?>
         
     </div>
