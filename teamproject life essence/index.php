@@ -1,6 +1,9 @@
 <?php
 session_start();
 require_once("connectdatabase.php");
+
+// Assuming the session username is stored in $_SESSION['username']
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
 ?>
 
 <html lang="en">
@@ -49,6 +52,7 @@ require_once("connectdatabase.php");
         <p>Welcome to our dynamic website, where content and experiences are tailored just for you!
             <br/>
         </p>
+        <p class="welcome-message">Welcome, <?php echo htmlspecialchars($username); ?>!</p>
     </section>
 </main>
 
