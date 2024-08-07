@@ -89,6 +89,5 @@ echo "<h2>Update Product - ID: " . $apple . " - " . $row['name'] . "  </h2>";
 
     </form>
 </div>
-</div>
 </body>
 </html>
