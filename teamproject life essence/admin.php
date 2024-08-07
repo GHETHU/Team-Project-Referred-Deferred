@@ -23,6 +23,8 @@ if (isset($_SESSION['username'])) {
         echo("UNEXPECTED FAILURE<br>");
         echo($ex->getMessage());
     }
+} else {
+    header("location: index.php");
 }
 
 
@@ -83,11 +85,9 @@ if ($verify) {
         </tr>
         <?php
         if ($basketrows && $basketrows->rowCount() > 0) {
-
-            //get name and quantity of all products in basket
-
             // Fetch and  print all  the records.
             while ($basketrow = $basketrows->fetch()) {
+
                 //get username of owner of basket
                 $userresult = ($db->query("SELECT username FROM users WHERE u_id =". $basketrow['u_id']))->fetchColumn();
 
@@ -99,9 +99,19 @@ if ($verify) {
                     $totalcost = $totalcost + $onecost;
                 }
 
+                //get name and quantity of all products in basket
+                $stupidproductarray = array_count_values($productlist); //too many variable names i wanted to shoot myself
+                $array = array_reverse($stupidproductarray); //apparently this shit more efficient!!
+                $productstring="";
+                foreach ($stupidproductarray as $x) {
+                    $getproductname = ($db->query("SELECT name FROM products WHERE p_id =". $stupidproductarray[$x]))->fetchColumn();
+                    $productquantity = array_pop($array);
+                    $productstring = $productstring . $productquantity . "x " . $getproductname . ", ";
+                }
+
                 echo "<tr><td align='left'><a href='updatebasket.php?b_id=$basketrow[b_id]'>" . $basketrow['b_id'] . "</a></td>";
                 echo "<td align='left'>" . $userresult . "</td>";
-                echo "<td align='left'>" . "placeholder" . "</td>";
+                echo "<td align='left'>" . rtrim($productstring, ", ") . "</td>";
                 echo "<td align='left'>£" . $totalcost . "</td>";
                 echo "<td align='left'>" . $basketrow['processed'] . "</td></tr>\n";
             }
