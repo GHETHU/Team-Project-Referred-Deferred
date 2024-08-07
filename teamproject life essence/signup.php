@@ -41,17 +41,13 @@ include 'navbar.php';
                     $message = "Email already registered.";
                 } else {
                     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        
-                    $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
-                    $stmt = $db->prepare($sql);
-                    $stmt->bindParam(1, $username, PDO::PARAM_STR);
-                    $stmt->bindParam(2, $email, PDO::PARAM_STR);
-                    $stmt->bindParam(3, $hashed_password, PDO::PARAM_STR);
-        
-                    if ($stmt->execute()) {
-                        $message = "Registration successful!";
-                    } else {
-                        $message = "Error: " . $stmt->errorInfo()[2];
+                    try {
+                        $stat = $db->prepare("INSERT INTO users values(default,?,?,?,0)");
+                        $stat->execute(array($username, $hashed_password, $email));
+                        $message = "Registration Successful!";
+                    } catch (PDOexception $ex) {
+                        echo "A database error has occurred.<br>";
+                        echo "Error:<em>" . $ex->getMessage() . "</em>";
                     }
                 }
             }
@@ -107,7 +103,7 @@ include 'navbar.php';
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					Don't have an account?<a href="./index.php">Login</a>
+					Don't have an account?<a href="./login.php">Login</a>
 				</div>
 				
 			</div>
