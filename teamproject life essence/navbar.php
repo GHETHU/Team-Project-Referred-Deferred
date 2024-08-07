@@ -19,7 +19,7 @@
 
 <header>
     <div class="navbar">
-        <div class="logo"><a href="#">LIFE ESSENCE</a></div>
+        <div class="logo"><a href="index.php">LIFE ESSENCE</a></div>
         <ul class="links">
             <li><a href="index.php">Home</a></li>
             <li><a href='listing.php'>Products Page</a></li>
@@ -29,7 +29,7 @@
             <li><a href='logout.php'>Logout</a></li>
             <li><a href='admin.php'>Admin</a></li>
       </ul>
-      <a href="#" class="action_btn">Get Started</a>
+      <a href="signup.php" class="action_btn">Get Started</a>
       <div class="toggle_btn">
         <i class="fa-solid fa-bars"></i>  
       </div>
