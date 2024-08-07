@@ -17,7 +17,7 @@
     <div class="content">
         <img src="logo.png" alt="Company Logo">
         <h1>Thank You for Choosing Life Essence</h1>
-        <a href="index.php" class="home-button">Go to Homepage</a>
+        <a href="teamproject life essence/index.php" class="home-button">Go to Homepage</a>
     </div>
 
 </div>    
