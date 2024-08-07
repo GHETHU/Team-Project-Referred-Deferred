@@ -19,13 +19,15 @@
 
 <header>
     <div class="navbar">
-      <div class="logo"><a href="#">LIFE ESSENCE</a></div>
-      <ul class="links">
-          <li><a href="index.php">Home</a></li>
-          <li><a href='listing.php'>Products Page</a></li>
-          <li><a href='aboutus.php'>About</a></li>
-          <li><a href='signup.php'>Signup</a></li>
-          <li><a href='admin.php'>Admin</a></li>
+        <div class="logo"><a href="#">LIFE ESSENCE</a></div>
+        <ul class="links">
+            <li><a href="index.php">Home</a></li>
+            <li><a href='listing.php'>Products Page</a></li>
+            <li><a href='aboutus.php'>About</a></li>
+            <li><a href='signup.php'>Signup</a></li>
+            <li><a href='login.php'>Login</a></li>
+            <li><a href='logout.php'>Logout</a></li>
+            <li><a href='admin.php'>Admin</a></li>
       </ul>
       <a href="#" class="action_btn">Get Started</a>
       <div class="toggle_btn">
@@ -37,6 +39,9 @@
         <li><a href="listing.php">Products Page</a></li>
         <li><a href="aboutus.php">About</a></li>
         <li><a href="admin.php">Admin</a></li>
+        <li><a href='signup.php'>Signup</a></li>
+        <li><a href='login.php'>Login</a></li>
+        <li><a href='logout.php'>Logout</a></li>
         <li><a href="signup.php" class="action_btn">Get Started</a></li>
     </div>
   </header>
