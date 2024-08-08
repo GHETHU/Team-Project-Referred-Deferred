@@ -19,11 +19,7 @@ if ($result->num_rows > 0)
         // OUTPUT DATA OF EACH ROW 
         while($row = $result->fetch_assoc()) 
         { 
-            echo "Basket id " . 
-                $row["b_id"]. " - User ID: " . 
-                $row["u_id"]. " | Product: " .  
-                $row["product_ids"]. " | Processed " .  
-                $row["processed"]. "<br>";
+            
 $productlist = (explode(",", $basketrow['product_ids']));
 array_pop($productlist);
 
