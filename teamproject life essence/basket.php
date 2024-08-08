@@ -23,7 +23,35 @@ if ($result->num_rows > 0)
                 $row["b_id"]. " - User ID: " . 
                 $row["u_id"]. " | Product: " .  
                 $row["product_ids"]. " | Processed " .  
-                $row["processed"]. "<br>"; 
+                $row["processed"]. "<br>";
+$productlist = (explode(",", $basketrow['product_ids']));
+array_pop($productlist);
+
+           $query1 = "SELECT * FROM `products` where product_id=$productlist[0];";
+            $result2=$db->query($query1);
+           if ($result2->num_rows > 0)  
+    { 
+        // OUTPUT DATA OF EACH ROW 
+        while($row2 = $result->fetch_assoc()) {
+
+      <table> 
+<tr>
+      <th> name</th>
+	<th> description </th>
+	<th> price </th>
+	<th> stock</th>
+</tr>
+<tr>
+ <td>echo $row2["name"] </td>
+<td> echo $row2["description"]</td>
+<td>echo $row2["price"] </td>
+<td> echo $row2["stock"]</td>
+</tr>      
+</table>
+}
+            
+
+                    
         } 
     }  
     else { 
