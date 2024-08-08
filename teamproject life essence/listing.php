@@ -1,4 +1,4 @@
-<?php
+<?php //by mubaraq
 include 'navbar.php';
     $products = [
       [
