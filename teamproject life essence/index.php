@@ -21,11 +21,10 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
     <div class="navbar">
         <div class="logo"><a href="index.php">LIFE ESSENCE</a></div>
         <ul class="links">
-            <li><a href="index.php">Home</a></li>
-            <li><a href='listing.php'>Products Page</a></li>
-            <li><a href='aboutus.php'>About</a></li>
-            <li><a href='signup.php'>Signup</a></li>
-            <li><a href='login.php'>Login</a></li>
+            <a href='listing.php'>Products</a>
+            <li><a href="basket.php">Basket</a></li>
+            <li><a href='aboutus.php'>About Us</a></li>
+            <li><a href='contactus.php'>Contact Us</a></li>
             <li><a href='logout.php'>Logout</a></li>
             <li><a href='admin.php'>Admin</a></li>
         </ul>
@@ -33,16 +32,6 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
         <div class="toggle_btn">
             <i class="fa-solid fa-bars"></i>
         </div>
-    </div>
-    <div class="dropdown_menu">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="listing.php">Products Page</a></li>
-        <li><a href="aboutus.php">About</a></li>
-        <li><a href="admin.php">Admin</a></li>
-        <li><a href='signup.php'>Signup</a></li>
-        <li><a href='login.php'>Login</a></li>
-        <li><a href='logout.php'>Logout</a></li>
-        <li><a href="signup.php" class="action_btn">Get Started</a></li>
     </div>
 </header>
 
