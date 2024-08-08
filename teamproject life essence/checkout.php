@@ -1,20 +1,19 @@
-<?php
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="teamproject life essence/css/Checkout.css">
-    <title>Life Essence - Checkout</title>
+    
+    <link rel="stylesheet" href="Checkout.css">
+
+    <title>Checkout Page</title>
 </head>
 <body>
 
 <div class="wrapper">
 
-    <form action="">
+    <form action="ThankYou.php" method="post">
 
         <div class="section">
 
@@ -58,7 +57,7 @@
 
                 <div class="input-field">
                     <label>Accepted Cards :</label>
-                    <img src="teamproject life essence/img/Visa-Mastercard-1-1024x378.webp" alt="Card Images">
+                    <img src="Visa-Mastercard-1-1024x378.webp" alt="Card Images">
                 </div>
                 <div class="input-field">
                     <label>Name on Card :</label>
@@ -88,15 +87,11 @@
     
         </div>
 
-        <input type="submit" value="Proceed to Checkout" class="submit-button">
+        <input type="submit" value="Proceed to Checkout" class="submit-button"  >
 
     </form>
 
-</div>
-
-
+</div>    
+    
 </body>
 </html>
-
-
-
