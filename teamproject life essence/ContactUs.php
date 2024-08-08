@@ -1,3 +1,33 @@
+<?php
+//connecting time !
+$db_host = 'localhost';
+$db_name = 'u_220192145_aproject';
+$username = 'u-220192145';
+$password = '020Z2XvJGO02ikG';
+
+try {
+    $db = new PDO("mysql:dbname=$db_name;host=$db_host", $username, $password);
+} catch (PDOException $ex) {
+    echo("Failed to connect to database;<br>");
+    echo($ex->getMessage());
+    exit;
+}
+
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    $stmt = $db->prepare("INSERT INTO contact_us (name, email, message) VALUES (:name, :email, :message)");
+    $stmt->bindParam(':name', $name);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':message', $message);
+    $stmt->execute();
+
+    echo "Message sent successfully!";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,14 +69,14 @@
 </head>
 <body>
     <h1>Contact Us</h1>
-    <form action="send_email.php" method="post">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required placeholder="Your name" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required placeholder="your_email@example.com">
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="4" cols="50" required placeholder="Your message"></textarea>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" name="submit">
     </form>
 
     <script>
