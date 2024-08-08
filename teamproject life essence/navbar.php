@@ -21,7 +21,7 @@
     <div class="navbar">
         <div class="logo"><a href="index.php">LIFE ESSENCE</a></div>
         <ul class="links">
-            <li><a href='listing.php'>Products</a></li>
+            <a href='listing.php'>Products</a>
             <li><a href="basket.php">Basket</a></li>
             <li><a href='aboutus.php'>About Us</a></li>
             <li><a href='contactus.php'>Contact Us</a></li>
