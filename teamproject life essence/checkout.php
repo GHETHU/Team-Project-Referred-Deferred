@@ -57,7 +57,7 @@
 
                 <div class="input-field">
                     <label>Accepted Cards :</label>
-                    <img src="Visa-Mastercard-1-1024x378.webp" alt="Card Images">
+                    <img src="img/Visa-Mastercard-1-1024x378.webp" alt="Card Images">
                 </div>
                 <div class="input-field">
                     <label>Name on Card :</label>
