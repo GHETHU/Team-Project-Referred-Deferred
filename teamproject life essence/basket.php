@@ -10,7 +10,7 @@ require_once('connectdatabase.php');      // this is connection
 <body>
     <div id='maindiv' style='color:#62C0BF';>
    <?php
-$query = "SELECT * FROM `basket`;";  //query to access p id from basket
+$query = "SELECT * FROM `basket`";  //query to access p id from basket
 try{
 $result = $db->query($query); //query as veen execute
 
