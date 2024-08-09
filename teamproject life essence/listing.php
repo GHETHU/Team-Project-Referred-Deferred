@@ -3,11 +3,6 @@ include 'navbar.php';
 require_once('connectdatabase.php');
 session_start();
 
-$db_host = 'localhost';
-$db_name = 'u_220192145_aproject';
-$username = 'u-220192145';
-$password = '020Z2XvJGO02ikG';
-
 ?>
 
 
@@ -232,35 +227,35 @@ $password = '020Z2XvJGO02ikG';
       <tbody>
         <tr>
           <td>Supplement 1</td>
-          <td><img src="images/herbal 3.png" alt="Product Image" class="product-image"></td>
+          <td><img src="img/product1.png" alt="Product Image" class="product-image"></td>
           <td><small>19 nutrients destined to help support healthy hair</small></td>
           <td><small>£50.00</small></td>
           <td><button class="add-to-basket-button" onclick="addToBasket('Supplement 1', 50)">Add to Basket</button></td>
         </tr>
         <tr>
           <td>Supplement 2</td>
-          <td><img src="images/Herbal 2.png" alt="Product Image" class="product-image"></td>
+          <td><img src="img/product2.png" alt="Product Image" class="product-image"></td>
           <td><small>Herbal Secrets Joint Care 120 Veggie Capsules Supplement</small></td>
           <td><small>£70.00</small></td>
           <td><button class="add-to-basket-button" onclick="addToBasket('Supplement 2', 70)">Add to Basket</button></td>
         </tr>
         <tr>
           <td>Supplement 3</td>
-          <td><img src="images/herbal 1.png" alt="Product Image" class="product-image"></td>
+          <td><img src="img/product3.png" alt="Product Image" class="product-image"></td>
           <td><small>Herbalife Formula 1 is a delicious complete meal replacement</small></td>
           <td><small>£25.00</small></td>
           <td><button class="add-to-basket-button" onclick="addToBasket('Supplement 3', 25)">Add to Basket</button></td>
         </tr>
         <tr>
           <td>Supplement 4</td>
-          <td><img src="images/herbal 5.png" alt="Product Image" class="product-image"></td>
+          <td><img src="img/product4.png" alt="Product Image" class="product-image"></td>
           <td><small>For a moment of self-care, warm, press and smooth into the skin</small></td>
           <td><small>£35.00</small></td>
           <td><button class="add-to-basket-button" onclick="addToBasket('Supplement 4', 35)">Add to Basket</button></td>
         </tr>
         <tr>
           <td>Supplement 5</td>
-          <td><img src="images/herbal 4.png" alt="Product Image" class="product-image"></td>
+          <td><img src="img/product5.png" alt="Product Image" class="product-image"></td>
           <td><small>A food supplement consisting of standardised plant extracts</small></td>
           <td><small>£60.00</small></td>
           <td><button class="add-to-basket-button" onclick="addToBasket('Supplement 5', 60)">Add to Basket</button></td>
