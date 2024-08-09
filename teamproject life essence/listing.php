@@ -174,28 +174,6 @@ session_start();
 </head>
 <body>
 
-  <!-- Navbar Section -->
-  <header>
-    <div class="navbar">
-        <div class="logo"><a href="index.php">LIFE ESSENCE</a></div>
-        <ul class="links">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="aboutus.php">About Us</a></li>
-            <li><a href="basket.php">Basket</a></li>
-            <li><a href="admin.php">Admin</a></li>
-        </ul>
-        <div class="toggle_btn">
-          <i class="fa-solid fa-bars"></i>  
-        </div>
-    </div>
-    <div class="dropdown_menu">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="aboutus.php">About Us</a></li>
-        <li><a href="basket.php">Basket</a></li>
-        <li><a href="admin.php">Admin</a></li>
-    </div>
-  </header>
-
   <script>
     const toggleBtn = document.querySelector('.toggle_btn');
     const toggleBtnIcon = document.querySelector('.toggle_btn i');
